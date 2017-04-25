@@ -17,7 +17,7 @@ class AuthorList extends Component {
             <Table striped className={this.props.className}>
                 <thead>
                 <tr>
-                    <th>Coda.</th>
+                    <th>Cod.</th>
                     <th>Livro</th>
                     <th>Autor</th>
                 </tr>
