@@ -38,7 +38,7 @@ class BookForm extends Component {
 
                 <Row>
                     <Col lg={6} md={6}>
-                        <Button className="pull-right" onClick={this.props.onSubmit}>Enviar</Button>
+                        <Button className="pull-right btn-primary" onClick={this.props.onSubmit}>Enviar</Button>
                     </Col>
                 </Row>
             </div>

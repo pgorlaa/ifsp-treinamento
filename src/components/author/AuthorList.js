@@ -13,7 +13,7 @@ class AuthorList extends Component {
         });
 
         return (
-            <Table responsive striped>
+            <Table striped>
                 <thead>
                 <tr>
                     <th>Cod.</th>
