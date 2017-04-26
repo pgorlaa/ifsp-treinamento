@@ -15,8 +15,8 @@ class Book extends Component {
             authors: []
         };
 
-        this.handleAutorChange = this.handleAutorChange.bind(this);
-        this.handleAddAuthor = this.handleAddAuthor.bind(this);
+        this.handleBookChange = this.handleBookChange.bind(this);
+        this.handleAddBook = this.handleAddBook.bind(this);
         this.callback = this.callback.bind(this);
     }
 
@@ -40,7 +40,7 @@ class Book extends Component {
         this.setState({book: {name: "", author: ""}});
     }
 
-    handleAutorChange(e) {
+    handleBookChange(e) {
         let book = this.state.book;
 
         book[e.target.id] = e.target.value;
@@ -48,7 +48,8 @@ class Book extends Component {
         this.setState({book: book});
     }
 
-    handleAddAuthor() {
+    handleAddBook(e) {
+        e.preventDefault();
         addBook(this.state.book, this.callback)
     }
 
@@ -58,7 +59,7 @@ class Book extends Component {
             <div>
                 <div className="col-lg-12">
                     <h1>Adicionar Livros</h1>
-                    <BookForm onChange={this.handleAutorChange} onSubmit={this.handleAddAuthor}
+                    <BookForm onChange={this.handleBookChange} onSubmit={this.handleAddBook}
                               authors={this.state.authors} book={this.state.book}/>
                 </div>
 

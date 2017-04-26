@@ -41,7 +41,8 @@ class Author extends Component {
         this.setState({author: author});
     }
 
-    handleAddAuthor() {
+    handleAddAuthor(e) {
+        e.preventDefault();
         addAuthor(this.state.author, this.callback)
     }
 

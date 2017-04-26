@@ -11,7 +11,7 @@ class BookForm extends Component {
         });
 
         return (
-            <div>
+            <form onSubmit={this.props.onSubmit}>
                 <Row>
                     <Col lg={6} md={6}>
                         <FormGroup>
@@ -38,10 +38,10 @@ class BookForm extends Component {
 
                 <Row>
                     <Col lg={6} md={6}>
-                        <Button className="pull-right btn-primary" onClick={this.props.onSubmit}>Enviar</Button>
+                        <Button type="submit" className="pull-right btn-primary">Enviar</Button>
                     </Col>
                 </Row>
-            </div>
+            </form>
         );
     }
 }

@@ -7,10 +7,10 @@ class AuthorForm extends Component {
     render() {
         return (
 
-        <div>
+        <form onSubmit={this.props.onSubmit}>
             <Row>
                 <Col lg={6} md={6}>
-                    <FormGroup>
+                    <FormGroup >
                         <ControlLabel>Nome:</ControlLabel>
                         <FormControl type="text" placeholder="nome do autor" name="name" id="name"
                                      onChange={this.props.onChange} value={this.props.author.name}/>
@@ -20,10 +20,10 @@ class AuthorForm extends Component {
 
             <Row>
                 <Col lg={6} md={6}>
-                    <Button className="pull-right btn-primary" onClick={this.props.onSubmit}>Enviar</Button>
+                    <Button type="submit" className="pull-right btn-primary">Enviar</Button>
                 </Col>
             </Row>
-        </div>
+        </form>
         );
     }
 }
